@@ -37,7 +37,7 @@ var objectB =Object.assign({}, objectA);
 
 // or
 
- var objectB = objectA.constructor();
+ var objectB = objectA.constructor(); // Не совсем понял для чего эта строка
     for (var attr in objectA) {
          objectB[attr] = objectA[attr];
     }
@@ -149,7 +149,7 @@ while (pass == false){
   password = prompt('Please enter password', '******');
   pass = search_pass(password, name, users)
   login = pass;
-}
+} // Что б не забивать память переменными в данном кейсе можно было использовать метки выходы
 
 
 
@@ -201,12 +201,11 @@ console.log(rezult);
 // Найдите сумму  1 + 2 + 3 + ... + N, где число N вводится пользователем из prompt
 
 // * Your code Start *
-var summetNumber = prompt('Please enter number #5', 0);
-var a = parseInt(summetNumber);
+var summetNumber = parseInt(prompt('Please enter number #5', 0)); // Использовать переменные часто, но только в том случае если эта переменная будет использоватся более 2х раз
 var rezult = 0;
 
 
-for (i = 1; i < a+1; i++) {
+for (i = 1; i < summetNumber+1; i++) {
   rezult = rezult + i;
 }
 
